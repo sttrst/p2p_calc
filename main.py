@@ -43,7 +43,7 @@ def on_click_count(c1, c2, p1, p2, ob):
 
 root = Tk()
 root.title("p2p calc")
-root.geometry("300x250")
+root.geometry("350x250")
 root.iconbitmap(default="favicon.ico")
 root.resizable(False, False)
 
