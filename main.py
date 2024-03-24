@@ -32,7 +32,7 @@ def on_click_count(c1, c2, p1, p2, ob):
 
     if f1:
         sprd = round(((ck2 / ck1) - 1) * 100, 2)
-        sprd_lbl.config(text=f'{sprd}')
+        sprd_lbl.config(text=f'{sprd} %')
 
     if check_is_alpha(ob) == False:
         prft_lbl.config(text='ОШИБКА')
