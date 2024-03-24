@@ -20,14 +20,14 @@ def on_click_count(c1, c2, p1, p2, ob):
         cntg1_lbl.config(text='ОШИБКА')
         f1 = False
     else:
-        ck1 = round(float(c1) * ((100 + float(p1)) / 100), 2)
+        ck1 = round(float(c1.replace(',', '.')) * ((100 + float(p1.replace(',', '.'))) / 100), 2)
         cntg1_lbl.config(text=f'{ck1}')
 
     if any(check_is_alpha(x) == False for x in [c2, p2]):
         cntg2_lbl.config(text='ОШИБКА')
         f1 = False
     else:
-        ck2 = round(float(c2) * ((100 - float(p2)) / 100), 2)
+        ck2 = round(float(c2.replace(',', '.')) * ((100 - float(p2.replace(',', '.'))) / 100), 2)
         cntg2_lbl.config(text=f'{ck2}')
 
     if f1:
@@ -37,7 +37,7 @@ def on_click_count(c1, c2, p1, p2, ob):
     if check_is_alpha(ob) == False:
         prft_lbl.config(text='ОШИБКА')
     else:
-        prft = round(sprd / 100 * float(ob), 2)
+        prft = round(sprd / 100 * float(ob.replace(',', '.')), 2)
         prft_lbl.config(text=f'{prft}')
 
 
